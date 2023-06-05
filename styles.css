@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    height: 100%;
+  }
+
+  .left-column {
+    background-color: #f5f6f8;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .right-column {
+    background-color: #fff; 
+    padding: 20px;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 24px;
+    color: #282828;
+    margin: 15px 0 15px 10px;
+    font-weight: 800;
+  }
+
+  .drop-area {
+    width: 80%;
+    border: 2px dashed #666;
+    border-radius: 5px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #80ed99;
+    color: #282828;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  }
+
+  .drop-area.active {
+    background-color: #e0e0e0;
+  }
+
+  .file-name {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .textbox {
+    width: 85%;
+    max-height: 50px;
+    resize: none;
+    background-color: #fff;
+    color: #333;
+    border: solid 1px #282828;
+    padding: 10px;
+    font-size: 25px;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .textbox::placeholder {
+    font-weight: bold;
+    color: #282828;
+  }
+
+  .text-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    margin-left: 8px;
+    height: 50px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .my-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  .responses{
+    margin-top: 50px;
+    min-height: auto;
+    border: 1px solid #282828;
+    border-radius: 10px;
+  }
+
+  .loading-area{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+  }
