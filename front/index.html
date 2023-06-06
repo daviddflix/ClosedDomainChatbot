@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/front/styles.css">
     <title>Closed Domain Chatbot</title>
-   
+
 </head>
 
 <body>
-  
+
     <div class="container">
         <div class="left-column">
             <div class="title">Drag and Drop Area</div>
             <div class="drop-area" id="dropArea">
-                <span>Drag and drop a file here</span>
+                <span class="tag">Drag and drop a file here</span>
                 <span class="file-name"></span>
             </div>
             <div class="loading-area">
@@ -30,11 +30,18 @@
                 <button class="my-button">send</button>
             </div>
             <div class="responses">
-
+                {% if new_doc %}
+                {% for paragraph in new_doc %}
+                <p>{{ paragraph }}</p>
+                {% endfor %}
+                {% else %}
+                <p>No document contents available.</p>
+                {% endif %}
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/front/script.js"></script>
 </body>
 
 </html>
